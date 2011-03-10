@@ -58,6 +58,9 @@
       = @person.name
       .description
         = @person.diaspora_handle
+
+  - if @aspect_ids
+    = render 'shared/publisher', :aspect => @aspect, :aspect_ids => @aspect_ids, :aspects_with_person => @aspects_with_person
   %hr
 
   - if @posts.count > 0
